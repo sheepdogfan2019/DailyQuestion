@@ -5,13 +5,15 @@ A tiny daily ritual: one coin flip, one wheel spin, one question — every day, 
 ## How it works
 
 1. **Coin toss.** The app alternates each day whose turn it is to call it — Jas one day, Lan the next. Tap Heads or Tails and watch the coin flip.
-2. **Winner spins.** Whoever called the coin correctly (or the other person, if they didn't) gets to spin a 1,000-slice color wheel.
-3. **Question revealed.** The wheel lands on a question — a Would You Rather, a True or False fact (with the answer underneath), or a Guess the Outcome brain-teaser — pulled from a pool of 1,000, never repeated.
-4. **Counter.** The top of the page always shows how many of the 1,000 have been used so far.
+2. **Winner spins.** Whoever called the coin correctly (or the other person, if they didn't) gets to spin a color wheel — and has to tap **Stop!** themselves to bring it to a stop. The wheel decelerates and zooms in to reveal the question.
+3. **Question revealed.** A Would You Rather or a Guess the Outcome brain-teaser, pulled from a curated pool of questions, never repeated.
+4. **Counter.** The top of the page always shows how many questions have been used so far.
 
 ## Tech notes
 
-This is a single self-contained `index.html` — no build step, no server, no dependencies. All 1,000 questions are embedded directly in the page.
+This is a single self-contained `index.html` — no build step, no server, no dependencies. All questions are embedded directly in the page.
+
+The question set was hand-curated: no True/False trivia (removed), and the Would You Rather / Guess the Outcome pairs were reviewed for redundancy, lopsided options, and wording before being added.
 
 **Progress is stored in your browser's `localStorage`**, on whichever device you open it on. That means:
 - It's zero-setup and free to host anywhere static files are served.
